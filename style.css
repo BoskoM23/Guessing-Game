@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --mainWidth: 65vw;
+    --darkBackground: #180013;
+    --offWhite: #ffffff;
+    --correctGuess: green;
+    --semiCorrectGuess: red;
+}
+body {
+    background-color: var(--darkBackground);
+}
+header,
+main,
+footer {
+    width: clamp(800px, var(--mainWidth), 1100px);
+}
+header,
+footer {
+    height: 10vh;
+    background-color: var(--offWhite);
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+main {
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    height: 40vw;
+    min-height: 400px;
+}
+.col {
+    background-color: var(--offWhite);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 5px 15px;
+    justify-content: space-around;
+    gap: 0.5em;
+}
+.col > * {
+    flex: 1;
+}
+.row {
+    display: flex;
+    gap: 0.5em;
+    justify-content: space-evenly;
+    padding: 0 1em;
+}
+.row > * {
+    flex: 1;
+}
+.cell {
+    border: 1px solid black;
+    transition: all 0.4s ease;
+}
+.legend {
+    flex-direction: column;
+    justify-content: space-between;
+}
+.legendParagraph {
+    display: flex;
+    align-items: center;
+}
+.legendSpan {
+    border: 1px solid black;
+    margin-right: 1em;
+    height: 1em;
+    width: 1em;
+    border-radius: 0.5em;
+}
+.greenSpan {
+    background-color: var(--correctGuess);
+}
+.redSpan {
+    background-color: var(--semiCorrectGuess);
+}
+.check {
+    border-radius: 50%;
+}
+.results {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.html {
+    background: url("html\ logo.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.btn {
+    cursor: pointer;
+}
+.css {
+    background: url("css\ logo.jpg");
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
+.js {
+    background: url("js\ logo.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.node {
+    background: url("node\ js\ logo.jpg");
+    background-position: center;
+    background-size: 120%;
+    background-repeat: no-repeat;
+}
+.questionMark {
+    background: url("question-mark.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.green {
+    background-color: var(--correctGuess);
+}
+.red {
+    background-color: var(--semiCorrectGuess);
+}
+.hidden {
+    visibility: hidden;
+}
